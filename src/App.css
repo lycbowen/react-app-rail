@@ -1,3 +1,17 @@
+.app {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 24px;
+}
+
 .fake-nav {
   width: 240px;
   padding: 8px;

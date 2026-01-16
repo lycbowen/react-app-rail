@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="app" style={{ display: 'flex' }}>
       <Sidebar active={active} onChange={setActive} />
-      <main>
+      <main className="app-content">
         {renderContent()}
       </main>
     </div>
