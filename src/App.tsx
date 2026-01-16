@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="app" style={{ display: 'flex' }}>
-      <header className="title-bar">
+      <header className="title-bar no-select">
         <div className="title-bar-left">
           <LayoutGrid className="app-logo" size={22} />
           <span className="app-name">应用名称</span>
