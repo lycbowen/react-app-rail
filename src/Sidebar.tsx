@@ -9,7 +9,6 @@ import {
     MessageSquare,
     BookOpen,
     Settings,
-    LayoutGrid,
 } from 'lucide-react'
 import './sidebar.css'
 
@@ -53,12 +52,8 @@ export default function Sidebar({
 
     return (
         <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
-            {/* header 你已有的，不动 */}
-            <div className="sidebar-header">
-                <LayoutGrid className="app-logo" size={22} />
-                {!collapsed && <span className="app-name">应用名称</span>}
-            </div>
-
+            {/* <div className="sidebar-header">
+            </div> */}
             <nav className="sidebar-nav">
                 {navItems.map((item, index) => {
                     if (item.type === 'group') {
