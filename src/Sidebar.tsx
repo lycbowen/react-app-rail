@@ -76,7 +76,7 @@ export default function Sidebar({
                             onClick={() => onChange(item.id)}
                             title={collapsed ? item.label : undefined}
                         >
-                            <Icon size={20} />
+                            <Icon size={16} />
                             {!collapsed && <span>{item.label}</span>}
                         </div>
                     )

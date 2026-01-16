@@ -8,11 +8,8 @@
 
 .title-bar {
   height: 40px; /* 推荐 32–40 */
-}
-
-.title-bar-left {
-  width: 228px; /* 和 sidebar 一样 */
-  padding-left: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .title-bar-left {
@@ -27,6 +24,13 @@
     color: #1f1f1f;
 }
 
+.title-bar-right {
+  display: flex;
+  gap: 2px;
+
+  -webkit-app-region: no-drag;
+}
+
 .app-body {
   display: flex;;
 }
@@ -36,48 +40,37 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding: 24px;
-  border-radius: 6px;
+  border-top-left-radius: 6px;
   border-top: 1px solid #e1e1e1;
   border-left: 1px solid #e1e1e1;
   background: #ffffff;
 }
 
-.fake-nav {
-  width: 240px;
-  padding: 8px;
-}
+.window-button {
+  width: 48px;
+  height: 40px;
 
-.nav-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
 
-  padding: 8px 12px;
-  border-radius: 6px;
+  font-size: 12px;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
 
   cursor: pointer;
   user-select: none;
-
-  transition: background-color 120ms ease;
 }
 
-.nav-item:hover {
-  background: rgba(0, 0, 0, 0.04);
+/* hover 状态（普通按钮） */
+.window-button.is-hovered {
+  background: #d4d4d4; /* ≈ neutral-300 */
 }
 
-.nav-item.is-active {
-  background: rgba(0, 120, 212, 0.15);
-}
-
-.nav-icon {
-  width: 16px;
-  height: 16px;
-}
-
-.nav-label {
-  font-size: 14px;
-}
-
-.nav-children {
-  margin-left: 28px;
+/* danger hover（关闭按钮） */
+.window-button.is-hovered.is-danger {
+  background: #ef4444; /* ≈ red-500 */
+  color: #fff;
 }
