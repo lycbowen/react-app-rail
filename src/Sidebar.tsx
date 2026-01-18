@@ -87,7 +87,7 @@ export default function Sidebar({
                     onClick={() => onChange('settings')}
                     title={collapsed ? '设置' : undefined}
                 >
-                    <Settings size={20} />
+                    <Settings size={16} />
                     {!collapsed && <span>{'设置'}</span>}
                 </div>
             </div>
